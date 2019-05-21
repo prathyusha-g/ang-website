@@ -1,0 +1,13 @@
+.first-box{padding:10px;background:#9C0;}
+.second-box{padding:10px; background:#39F;}
+.third-box{padding:10px;background:#F66;}
+.fourth-box{padding:10px;background:#6CC;}
+.abt-bg{background-image: url(http://ispacestudio.files.wordpress.com/2012/12/d.jpg);width: 100%;height: 300px;}
+h1.abt-bg{font-size: 45px;text-align: center}
+.abt-bg h1{
+    color: aliceblue;
+}
+.center-logo{text-align: center}
+h2{
+    font-size: 20px;
+}

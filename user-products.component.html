@@ -1,0 +1,80 @@
+<!-- <div id="example1"> -->
+    
+  <app-product-bg></app-product-bg>
+<!-- <button style="font-size: 25px;color:black" routerLink="/Rating"><i class="fas fa-arrow-right">Show Rating</i></button> -->
+<!-- <button class="btn-danger" style="font-size: 25px;color:black;text-align: center" routerLink="/meet-us"><i class="fas fa-arrow-right">Meet-Us</i></button> -->
+<!-- </div> -->
+<br>
+<br>
+
+<h1 style="color:crimson">GREAT DEALS ON EXCITING MODELS </h1>
+  <h5 style="color:cadetblue">  Find your vehicle for the track, street, trail or water </h5>  
+ 
+<!-- <div>
+  <div>
+  <div class="products">
+    <img src="http://media.motoblog.it/2/200/2007KawasakiVulcan2000ClassicLTasmall.jpg">
+    <p>Kawasaki-Ducatu</p>
+    <p>₹ 1.5-lakh</p>
+  </div>
+  <div class="products">
+    <img src="https://moto.aaannunci.it/pics/18/42/9811179.jpg">
+    <p>Kawasaki-Ninja</p>
+    <p>₹ 2.35-lakh</p>
+  </div>
+  <div class="products">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Kawasaki_Z1000_%281977%29_-_15344712220.jpg/1200px-Kawasaki_Z1000_%281977%29_-_15344712220.jpg">
+    <p>Kawasaki-Vulcan</p>
+    <p>₹ 2.9-lakh</p>
+  </div>
+  <div class="products">
+    <img src="http://put.edidomus.it/dueruote/nuovo/500/34a204.jpg">
+    <p>K-Eliminator</p>
+    <p>₹ 37-lakhs</p>
+  </div>
+  <div class="products">
+    <img src="http://media.motorbox.com/cache/images/2/0/5/205872/205872-16x9-lg.jpg">
+    <p>Kawasaki-Estrella</p>
+    <p>₹ 75-lakhs</p>
+  </div>
+  <div class="products">
+    <img src="http://i.imgur.com/RcFLt.jpg">
+    <p>Kawasaki-VN1600</p>
+    <p>₹ 2.4-lakh</p>
+  </div>
+  <div class="products">
+    <img src="http://media.motorbox.com/image/kawasaki-versys-1000-3/4/8/2/482299/482299-16x9-lg.jpg">
+    <P>Ninja-X20</P>
+    <p>₹ 25 lakhs</p>
+  </div>
+  <div class="products">
+    <img src="https://www.amotomio.it/images/phocagallery/201104Kawa1400gtr/Kawasaki1400GTR05.JPG">
+    <p>Kawasaki-1400</p>
+    <p>₹ 75 lakhs</p>
+  </div> 
+  <div class="products">
+      <img src="https://i.pinimg.com/originals/11/7e/06/117e06d0143303038e6faa161c0c818d.jpg">
+      <p>Kawasaki-800cc</p>
+      <p>₹ 1.5 lakhs</p>
+    </div>
+</div>
+</div> -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+<div>
+  <div class="products" *ngFor="let product of products">
+    <!-- <img src="{{product.producturl}}" (click)="deleteProduct(product._id)"> -->
+    <!-- <img src="{{product.producturl}}" routerLink="/getdisc"> -->
+    <img src="{{product.producturl}}" (click)="getProductsByID(product._id)">
+    <p style="color: red;font-size: 15px;float: center">{{product.productname}}</p>
+    <p style="font-size: 20px;float: center">₹ {{product.productprice}}</p>
+
+    <div class="w3-section">
+      <button class="w3-button w3-green btn btn-primary Buy" (click)="buypro()" >Buy</button>
+      <!-- <button style="margin-left: 40%" type="submit" id="loginSubmit" class="btn btn-success loginFormElement" (click)="updateProduct(productId,productname,producturl,productprice,productdiscription)">Edit</button> -->
+    </div>
+  </div>
+  </div>

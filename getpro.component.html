@@ -1,0 +1,110 @@
+<div class="display">
+<div class="card">
+<div class="container">
+<form [formGroup]="addProd" (ngSubmit)="onSubmit()">
+
+<div class="form-group">
+
+<input type="text" class="form-control" 
+id="productId"  #productId="ngModel"
+ name="productId"  formControlName="productId"
+ placeholder="Product Id" class="btn btn-danger size"
+[ngClass]="{ 'is-invalid': submitted && f.productId.errors }">
+<div *ngIf="submitted && f.productId.errors" class="invalid-feedback">
+
+    <div *ngIf="f.productId.errors.required">Product Id is required</div>
+    <div *ngIf="f.productId.errors.minlength">Product Id must have minlength 3</div>
+
+</div>
+
+</div>
+            
+<div class="form-group">
+
+<input type="text" class="form-control" 
+id="productname" #productname="ngModel" formControlName="productname"
+ name="productname" class="btn btn-danger size"  placeholder="Product Name"
+ [ngClass]="{ 'is-invalid': submitted && f.productname.errors }">
+
+ <div *ngIf="submitted && f.productname.errors" class="invalid-feedback">
+
+    <div *ngIf="f.productname.errors.required">Product Name is required</div>
+    <div *ngIf="f.productname.errors.minlength">Product Name must have minlength 6</div>
+
+  </div>
+
+</div>
+            <br>
+            <br>
+
+<div class="form-group">
+
+<input type="text" class="form-control" id="productprice" 
+[ngClass]="{ 'is-invalid': submitted && f.productprice.errors }" 
+#productprice="ngModel" name="productprice" formControlName="productprice"
+ placeholder="Product Price" class="btn btn-danger  size">
+
+ <div *ngIf="submitted && f.productprice.errors" class="invalid-feedback">
+    <div *ngIf="f.productprice.errors.required">Product Price is required</div>
+    <div *ngIf="f.productprice.errors.pattern">Invalid Prod Price</div>
+  </div>
+
+</div>
+            <br>
+            <br>
+
+<div class="form-group">
+
+ <input type="text"  class="form-control"
+  id="producturl"   [ngClass]="{ 'is-invalid': submitted && f.producturl.errors }"
+  #producturl="ngModel" name="producturl"
+   formControlName="producturl" placeholder="Product Url"
+    class="btn btn-danger  size">
+
+    <div *ngIf="submitted && f.producturl.errors" class="invalid-feedback">
+
+        <div *ngIf="f.producturl.errors.required">Product Image is required</div>
+
+    </div>
+</div>
+            <br>
+            <br>
+
+<div class="form-group">
+
+  <input type="text" class="form-control"
+    #productdiscription="ngModel"  id="productdiscription"
+    [ngClass]="{ 'is-invalid': submitted && f.productdiscription.errors }" 
+   name="productdiscription" ngModel placeholder="Product Discription"
+  class="btn btn-danger size" formControlName="productdiscription">
+
+  <div *ngIf="submitted && f.productdiscription.errors" class="invalid-feedback">
+
+      <div *ngIf="f.productdiscription.errors.required">Product Description is required</div>
+      <div *ngIf="f.productdiscription.errors.minlength">Product Description must have minlength 10</div>
+      <div *ngIf="f.productdiscription.errors.maxlength">Product Description should not exceed 50 chars</div>
+
+  </div>
+
+</div>
+            <br>
+            <br>
+         <button type="submit" [disabled]="addProd.form.invalid">Add to Cart</button>
+        </form>    
+    </div> 
+    </div>
+    </div>
+  <br>
+  <br>
+  <br>
+<h2 style="color: crimson;font-size: 35;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center ">Your Cart List</h2>
+<br>
+<div class="card" style="width: 18rem;" *ngFor="let product of products">
+  <img class="card-img-top prodImage" src="{{product.producturl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{product.productname}}</h5>
+    <p class="card-text prodPrice">Rs: {{product.productprice}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<br>

@@ -1,0 +1,41 @@
+#example1 {
+  /* border: 2px solid black; */
+  padding: 300px;
+  background: url("https://www.kawasaki.com/images/ShoppingTools/gtse-logo-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 300%;
+  height: 50px;
+  float:center;
+}
+
+img{
+
+    height: 250px;
+    width:200px;
+    /* height: 350px;
+    width: 300px; */
+ } 
+.products{
+    display:inline-block;
+    margin:40px;
+    /* margin: 80px; */
+    width: 200px;
+    border-radius: 4.5px;
+    box-shadow:pink;
+     transform:scale(1);
+     transition-duration: 0.5s;
+     max-height: 380px;
+     overflow: hidden;
+
+
+}
+
+p{
+    color: black;
+    font-size: 25px;
+}
+.products:hover{
+    transform:scale(1.05);
+     transition-duration: 0.5s;
+}

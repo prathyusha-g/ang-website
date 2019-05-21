@@ -1,0 +1,191 @@
+/* .footer-style{
+    color:white;
+    font-size:15px;
+}
+h2{
+    color:green;
+    
+}
+.footer-left{
+    float: left;
+    margin:80px;
+}
+.footer-center{
+   float: left;
+   
+}
+.footer-right{
+    float: right;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color:black;
+    color: white;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+.card{
+    border: 5px solid green;
+    height: 50%;
+} */
+
+
+/* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
+/* body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+.header {
+    height: 100vh;
+    background-image: 
+    linear-gradient(to right bottom, 
+   rgba(76, 216, 255, 0.8),
+   rgba(30, 108, 217, 0.8)),
+    url('https://ichef.bbci.co.uk/onesport/cps/480/mcs/media/images/81141000/jpg/_81141686_jonathanrea.jpg');
+    
+  background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.brand-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 7.4px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+  font-size: 14px;
+} */
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color:black;
+    color: white;
+  }
+/* 
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+   */
+
+  .card{
+    border: 5px solid palegreen;
+    height: 500px;
+}
+.card-deck{
+    height: 500px;
+
+}

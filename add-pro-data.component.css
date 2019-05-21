@@ -1,0 +1,74 @@
+
+img{
+
+  height: 250px;
+  width:250px; 
+}
+
+ .products{
+  display:inline-block;
+  margin:30px;
+  
+  width: 250px;
+  border-radius: 4.5px;
+  box-shadow: gray;
+   transform:scale(1);
+   transition-duration: 0.5s;
+   max-height: 450px;
+   overflow: hidden;
+
+
+} */
+p{
+  color: black;
+  font-size: 25px;
+}
+.products:hover{
+  transform:scale(1.05);
+   transition-duration: 0.5s;
+}
+
+
+
+.addProd {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://www.advpulse.com/wp-content/uploads/2018/06/KTM-1290-Super-Adventure-S-Adventure-Motorcycle-4b.jpg");
+
+  /* Control the height of the image */
+  min-height: 400px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-20%, -20%);
+  z-index: 2;
+  width: 60%;
+  padding: 18px;
+  text-align: center;
+}

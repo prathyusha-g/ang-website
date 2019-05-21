@@ -1,0 +1,19 @@
+h1{
+    margin: 220px;
+    font-size: 75px;
+    float: left;
+
+}
+
+img{
+    height: 430px;
+ 
+
+}
+h2{
+    color: chartreuse;
+}
+ .bd-example{
+    width: 100%;
+    max-width: 1550px;
+ } 

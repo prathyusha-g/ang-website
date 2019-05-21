@@ -1,0 +1,66 @@
+<img src="https://malaysianriders.files.wordpress.com/2016/05/11.jpg" style="width: 100%;height: 400px;">
+<div class="container">
+<div class="row centered-form">
+<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+<div class="panel panel-default">
+<div class="panel-heading"> 
+<h3 class="panel-title">Register Here</h3>
+</div>
+<div class="panel-body">
+
+<form #registerForm="ngForm"(ngSubmit)="register(registerForm)">
+<div class="form-group">  
+<input type="text" class="form-control" id="username" name="username"  placeholder="Enter Name" 
+[(ngModel)]="registerUserData.username" #username="ngModel" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,20}"
+[class.is-invalid]="username.touched && username.invalid" ngModel  required>
+<div *ngIf="username.errors && username.touched && username.invalid" >
+
+    <small class="text-danger" *ngIf="username.errors.pattern"> Its should have uppercase and lowercase with minimum 5 charcters</small>
+    <small class="text-danger" *ngIf="username.errors.required"> username required</small>
+
+</div>
+</div>
+
+<br>
+
+<div class="form-group">
+<input type="email" #email="ngModel"  class="form-control"  id="email" name="email"  placeholder="Email Address" 
+ [(ngModel)]="registerUserData.email"  [class.is-invalid]="email.invalid && email.touched"
+  ngModel  required>
+  <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required.</small>
+</div>
+
+<br>
+
+<div class="form-group">
+ <input type="password" #password="ngModel"  class="form-control" id="password" name="password" placeholder="Enter Password"
+  [(ngModel)]="registerUserData.password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!]).{5,20}"
+  [class.is-invalid]="password.touched && password.invalid" appPassword ngModel required>
+  <div *ngIf="password.errors && password.touched && password.invalid">
+
+    <small class="text-danger" *ngIf="password.errors.pattern"> it should have uppercase,lowercase,numeric,and special character </small>
+    <small class="text-danger" *ngIf="password.errors.required"> password is required</small>
+            
+  </div>
+</div>
+<!-- <img src="https://lh3.googleusercontent.com/a-/AAuE7mDvOO5BDu8Lb13yVGGpuHJbcw7CAHGH1R3RZTVzNg=s24-c-k-no" width="50%";height="60%"> -->
+<div class="form-group">
+    Gender:&nbsp;<input type="radio" name="fgender" ngModel value="female" #fgender="ngModel" ngModel> Female
+    
+    <input type="radio" name="mgender" value="male" ngModel #mgender="ngModel" ngModel> Male
+    <br>
+    <br>
+    <input type="checkbox" name="tandc" #tandc= "ngModel" ngModel required> I agree to terms and conditions
+    </div>
+<!-- <button type="submit" (click)="reg()"  [disabled]="userForm.form.invalid" value="Register" class="btn btn-info" style="background-color: green">Register</button> -->
+<button type="submit" [disabled]="registerForm.form.invalid" class="btn btn-info" (click)="registerUser()" style="background-color: green">Register</button>
+
+<!-- <h1>{{resp?.message}}</h1> -->
+</form>
+
+</div>
+</div>
+</div>    
+</div>
+</div>
+<app-footpage></app-footpage>

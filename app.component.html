@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- 
+  <img src="https://cdn.shopify.com/s/files/1/0235/2123/products/Kawasaki_Logo.jpg?v=1521546625
+  S" style="width:65px;height: 45px">  -->
+  <img src="https://www.powergenasia.com/__media/Pages/kawasaki_logo.png" style="width: 8%;height: 8%;" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link"  routerLinkActive="active"[routerLink]="['/home']" >Home <span class="sr-only">(current)</span></a>
+  
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active"  routerLink="/special">SHOW PRODUCTS</a>
+       
+
+      </li> -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLinkActive="active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Show Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/meet-us">Meet-US</a>
+          <a class="dropdown-item" routerLink="/Rating">Rating</a>
+          <!-- <a class="dropdown-item" routerLink="/special">Cart-List</a> -->
+          </div>
+      </li>
+
+      <li class="nav-item dropdown float-right">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          User
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/adregister">Register</a>
+          <a class="dropdown-item" routerLink="/adlogin">Login</a>
+        </div> 
+      </li>
+      
+      <!-- <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/events">Price- List</a>
+         
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/add-cart">Add-Cart</a>
+         </li> -->
+         
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/get-cart">Cart-List</a>
+         
+        </li> --> 
+      <li class="nav-item ">
+        <a class="nav-link"  routerLinkActive="active" routerLink="/about">AboutUs</a>
+       
+      </li>
+
+      <!-- <li class="nav-item ">
+        <a class="nav-link"  routerLinkActive="active" routerLink="/employee">Details</a>
+       
+      </li> -->
+         </ul>
+        <ul class="navbar-nav" style="float: right;">
+       
+
+   <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLinkActive="active" routerLink="/register">Register</a>
+  <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLinkActive="active"  [routerLink]="['/login']" >Login</a>
+ <a class="nav-link" style="cursor: pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">LogOut</a>
+    </ul>
+    <!-- ///////////////////////////////////// -->
+
+    <!-- <ul class="navbar-nav" style="float: left;">
+     
+ <a class="nav-link" *ngIf="!_adminAccountService.adminloggedIn()" routerLinkActive="active" routerLink="/adregister"><i class="far fa-registered">Register</i></a>
+<a class="nav-link" *ngIf="!_adminAccountService.adminloggedIn()" routerLinkActive="active"  [routerLink]="['/adlogin']" ><i class="fas fa-sign-in-alt">Login</i></a>
+<a class="nav-link" style="cursor: pointer" *ngIf="_adminAccountService.adminloggedIn()" (click)="_adminAccountService.adminlogoutUser()"><i class="fas fa-user-lock">LogOut</i></a>
+
+  </ul> -->
+  
+
+  </div>
+</nav>
+<div class="container">
+<router-outlet></router-outlet>
+</div>

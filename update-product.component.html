@@ -1,0 +1,83 @@
+
+<body>
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <form [formGroup]="addProd" novalidate>
+
+          <div class="form-group">
+
+            <b style="color:blue">Product Id:</b>
+            <input name="productId" class="form-control" #productId
+             placeholder="Product Id" type="text" formControlName="productId"
+              [ngClass]="{ 'is-invalid': submitted && f.productId.errors }">
+            <div *ngIf="submitted && f.productId.errors" class="invalid-feedback">
+              <div *ngIf="f.productId.errors.required">Product Id is required</div>
+              <div *ngIf="f.productId.errors.minlength">Product Id must have minlength 3</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <b style="color:blue">Product Name:</b>
+            <input name="productname" class="form-control" #productname 
+            placeholder="Product Name" type="text"
+              formControlName="productname"
+               [ngClass]="{ 'is-invalid': submitted && f.productname.errors }">
+            <div *ngIf="submitted && f.productname.errors" class="invalid-feedback">
+              <div *ngIf="f.productname.errors.required">Product Name is required</div>
+              <div *ngIf="f.productname.errors.minlength">Product Name must have minlength 6</div>
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+            <b style="color:blue">Product Price:</b>
+            <input name="productprice" class="form-control" #productprice
+             placeholder="Product Price" type="text"
+              formControlName="productprice"
+               [ngClass]="{ 'is-invalid': submitted && f.productprice.errors }">
+            <div *ngIf="submitted && f.productprice.errors" class="invalid-feedback">
+              <div *ngIf="f.productprice.errors.required">Product Price is required</div>
+              <!-- <div *ngIf="f.Price.errors.minlength">Product Price must have minlength 6</div> -->
+              <div *ngIf="f.productprice.errors.pattern">Invalid Prod Price</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <b style="color:blue">Product Image:</b>
+            <input name="producturl" class="form-control" #producturl
+             placeholder="Product Image" type="text"
+              formControlName="producturl" 
+              [ngClass]="{ 'is-invalid': submitted && f.producturl.errors }">
+            <div *ngIf="submitted && f.producturl.errors" class="invalid-feedback">
+              <div *ngIf="f.producturl.errors.required">Product Image is required</div>
+
+            </div>
+
+          <div class="form-group">
+            <b style="color:blue">Product Description:</b>
+            <input name="productdiscription" class="form-control" #productdiscription
+             placeholder="Product Desc" type="text"
+              formControlName="productdiscription" 
+            [ngClass]="{ 'is-invalid': submitted && f.productdiscription.errors }">
+            <div *ngIf="submitted && f.productdiscription.errors" class="invalid-feedback">
+              <div *ngIf="f.productdiscription.errors.required">Product Description is required</div>
+              <div *ngIf="f.productdiscription.errors.minlength">Product Description must have minlength 10</div>
+              <div *ngIf="f.productdiscription.errors.maxlength">Product Description should not exceed 50 chars</div>
+            </div>
+          </div>
+
+        </div>
+        <button style="margin-left: 40%" type="submit" id="loginSubmit" class="btn btn-success loginFormElement" (click)="updateProduct(productId,productname,producturl,productprice,productdiscription)">Edit</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</body>
